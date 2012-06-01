@@ -37,8 +37,10 @@ import com.laxser.tentaclex.util.URIUtil;
 /**
  * Xoa方法的Proxy的InvocationHandler
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-11 下午11:13:56
+ * @author laxser  Date 2012-6-1 上午8:55:16
+@contact [duqifan@gmail.com]
+@ServiceInvocationHandler.java
+
  */
 public class ServiceInvocationHandler implements InvocationHandler{
 

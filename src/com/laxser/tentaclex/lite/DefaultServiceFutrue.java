@@ -23,8 +23,10 @@ import com.laxser.tentaclex.TentacleResponse;
 /**
  * 默认的{@link ServiceFuture}实现
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:19:18
+ @author laxser  Date 2012-6-1 上午8:55:52
+@contact [duqifan@gmail.com]
+@DefaultServiceFutrue.java
+
  * @param <T>
  */
 public class DefaultServiceFutrue<T> implements ServiceFuture<T> {

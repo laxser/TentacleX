@@ -23,8 +23,10 @@ import com.laxser.tentaclex.commons.spdy.datastructure.NameValueBlock;
  *   |             ...                  |
  * </pre>
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午8:59:41
+@contact [duqifan@gmail.com]
+@DefaultSynStream.java
+
  * 
  * @deprecated 被更优化的实现所取代
  */

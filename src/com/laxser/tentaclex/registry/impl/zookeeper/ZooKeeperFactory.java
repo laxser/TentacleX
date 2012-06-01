@@ -12,8 +12,10 @@ import org.apache.zookeeper.ZooKeeper;
 /**
  * 统一封装获取ZooKeeper实例的逻辑
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-17 上午11:36:38
+ * @author laxser  Date 2012-6-1 上午8:47:43
+@contact [duqifan@gmail.com]
+@ZooKeeperFactory.java
+
  */
 public class ZooKeeperFactory {
 	

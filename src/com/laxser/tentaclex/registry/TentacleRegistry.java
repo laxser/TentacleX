@@ -4,8 +4,10 @@ import java.util.List;
 
 /**
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-19 下午03:59:52
+ * @author laxser  Date 2012-6-1 上午8:46:32
+@contact [duqifan@gmail.com]
+@TentacleRegistry.java
+
  */
 public interface TentacleRegistry {
 	

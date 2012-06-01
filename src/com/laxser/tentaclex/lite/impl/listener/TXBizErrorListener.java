@@ -14,8 +14,10 @@ import com.laxser.tentaclex.lite.ServiceFuture;
  * 如果是其它错误，则log之；
  * 如果是成功的response，则什么也不做。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-1-10 下午12:01:55
+ * @author laxser  Date 2012-5-31 下午4:47:54
+@contact [duqifan@gmail.com]
+@TXBizErrorListener.java
+
  */
 public class TXBizErrorListener extends ServiceFailureListener<TXBizErrorBean, RuntimeException> {
 

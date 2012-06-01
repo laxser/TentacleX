@@ -4,8 +4,10 @@ import java.util.Comparator;
 
 /**
  * Xoa服务描述符，用以表示提供服务的真实机器的IP地址和端�? * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-19 下午04:02:16
+ * @author laxser  Date 2012-6-1 上午8:46:07
+@contact [duqifan@gmail.com]
+@TentacleServiceDescriptor.java
+
  */
 public interface TentacleServiceDescriptor {
 	

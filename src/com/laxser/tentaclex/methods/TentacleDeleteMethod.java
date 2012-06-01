@@ -3,8 +3,10 @@ package com.laxser.tentaclex.methods;
 /**
  * DELETE方法
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:37:07
+ * @author laxser  Date 2012-6-1 上午8:54:29
+@contact [duqifan@gmail.com]
+@TentacleDeleteMethod.java
+
  */
 public class TentacleDeleteMethod extends TentacleBodilessMethod {
 

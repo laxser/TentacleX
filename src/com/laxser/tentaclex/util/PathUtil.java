@@ -1,14 +1,16 @@
-package com.laxser.tentaclex.registry.impl.zookeeper;
+package com.laxser.tentaclex.util;
 
 /**
  * 路径计算相关的工具类
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-20 上午11:21:12
+ * @author laxser  Date 2012-6-1 上午8:47:27
+@contact [duqifan@gmail.com]
+@PathUtil.java
+
  */
 public class PathUtil {
 
-	static final String SERVICE_NODE_FOLDER = "/.service-nodes";
+	public static final String SERVICE_NODE_FOLDER = "/.service-nodes";
 	
 	/**
 	 * 给定serviceId，计算出其对应的path，相对路径

@@ -5,7 +5,10 @@ import com.laxser.tentaclex.Octopus.TentacleResponseCallback;
 /**
  * XoaClient的接口
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ *@author laxser  Date 2012-6-1 上午8:44:24
+@contact [duqifan@gmail.com]
+@Tentacle.java
+
  */
 public interface Tentacle {
 

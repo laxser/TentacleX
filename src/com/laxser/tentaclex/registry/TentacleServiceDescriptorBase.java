@@ -2,7 +2,10 @@ package com.laxser.tentaclex.registry;
 
 /**
  * XoaServiceDescriptor的基�?���? * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午8:46:00
+@contact [duqifan@gmail.com]
+@TentacleServiceDescriptorBase.java
+
  */
 public class TentacleServiceDescriptorBase implements TentacleServiceDescriptor{
 

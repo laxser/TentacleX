@@ -8,8 +8,10 @@ import com.laxser.tentaclex.commons.spdy.frame.control.SynReply;
 import com.laxser.tentaclex.commons.spdy.frame.control.SynStream;
 
 /**
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午8:58:19
+@contact [duqifan@gmail.com]
+@FrameFactory.java
+
  */
 public class FrameFactory {
 

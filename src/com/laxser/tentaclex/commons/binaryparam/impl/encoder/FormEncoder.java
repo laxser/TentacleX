@@ -7,7 +7,12 @@ import java.net.URLEncoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoding;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-5-31
+ */
 public class FormEncoder implements Encoder{
 
     @Override

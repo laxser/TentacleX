@@ -15,8 +15,10 @@ import com.laxser.tentaclex.commons.spdy.frame.Frame;
 /**
  * 把Frame对象封装成netty的ChannelBuffer对象
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-5-31 下午4:57:45
+@contact [duqifan@gmail.com]
+@SPDYFrameEncoder.java
+
  */
 @ChannelPipelineCoverage("one")
 public class SPDYFrameEncoder extends OneToOneEncoder {

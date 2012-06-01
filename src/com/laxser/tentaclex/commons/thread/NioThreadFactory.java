@@ -5,8 +5,10 @@ import java.util.concurrent.ThreadFactory;
 /**
  * 给netty的nio线程使用的ThreadFactory，主要是为了设置 线程的优先级
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-4-18 上午10:39:50
+ * @author laxser  Date 2012-6-1 上午8:57:42
+@contact [duqifan@gmail.com]
+@NioThreadFactory.java
+
  */
 public class NioThreadFactory implements ThreadFactory {
 

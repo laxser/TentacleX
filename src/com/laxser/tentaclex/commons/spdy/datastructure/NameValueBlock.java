@@ -25,8 +25,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
  * 
  * </pre>
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午9:03:33
+@contact [duqifan@gmail.com]
+@NameValueBlock.java
+
  */
 public class NameValueBlock implements Map<String, String>, Serializable {
 

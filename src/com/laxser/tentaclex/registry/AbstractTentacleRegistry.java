@@ -14,7 +14,10 @@ import org.apache.commons.logging.LogFactory;
 /**
  * XoaRegistry的一个基础实现类
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-5-31 下午4:48:26
+@contact [duqifan@gmail.com]
+@AbstractTentacleRegistry.java
+
  */
 public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 

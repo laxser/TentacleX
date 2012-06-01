@@ -11,7 +11,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-5-31
+ * time 下午4:55:18
+ */
 public class MultiFormatParamEncoder {
     
     /**

@@ -24,7 +24,9 @@ import com.laxser.tentaclex.commons.spdy.frame.FrameFactory;
 import com.laxser.tentaclex.commons.spdy.frame.control.SynStream;
 
 /**
- * @author Lookis (lookisliu@gmail.com), Weibo Li
+ *@author laxser  Date 2012-5-31 下午4:58:29
+@contact [duqifan@gmail.com]
+@FrameRequestEncoder.java
  * 
  */
 @ChannelPipelineCoverage("one")

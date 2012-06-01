@@ -19,8 +19,10 @@ import com.laxser.tentaclex.registry.TentacleServiceDescriptorBase;
 /**
  * 用于分析tomcat中的server.xml配置文件
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-28 上午11:46:25
+ *@author laxser  Date 2012-6-1 上午8:46:49
+@contact [duqifan@gmail.com]
+@ServerXmlResolver.java
+
  */
 public class ServerXmlResolver {
 

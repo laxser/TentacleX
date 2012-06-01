@@ -15,8 +15,10 @@ import com.laxser.tentaclex.commons.binaryparam.impl.ParameterWrapperImpl;
 /**
  * 支持多格式参数的Method实现
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-5-26 下午12:24:55
+ * @author laxser  Date 2012-6-1 上午8:54:51
+@contact [duqifan@gmail.com]
+@TentacleMultiFormatPostMethod.java
+
  */
 public class TentacleMultiFormatPostMethod extends TentaclePostMethod {
     

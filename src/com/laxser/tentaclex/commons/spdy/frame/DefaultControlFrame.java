@@ -8,7 +8,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
 /**
  * The default {@link ControlFrame} implementation.
  * 
- * @author Lookis (lookisliu@gmail.com)
+ *@author laxser  Date 2012-6-1 上午8:58:59
+@contact [duqifan@gmail.com]
+@DefaultControlFrame.java
+
  * 
  */
 public abstract class DefaultControlFrame extends DefaultFrame implements ControlFrame {

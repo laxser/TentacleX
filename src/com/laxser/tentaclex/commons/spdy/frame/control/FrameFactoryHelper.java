@@ -6,8 +6,10 @@ package com.laxser.tentaclex.commons.spdy.frame.control;
  * 
  * 包级别的构造函数是为了控制构造过程，这点在重构的过程中尤为重要。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-6-17 上午11:45:34
+ * @author laxser  Date 2012-6-1 上午8:59:48
+@contact [duqifan@gmail.com]
+@FrameFactoryHelper.java
+
  */
 public class FrameFactoryHelper {
 	

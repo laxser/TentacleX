@@ -6,7 +6,14 @@ import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-6-1
+ * time 上午8:56:59
+ */
 @Target( { ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited

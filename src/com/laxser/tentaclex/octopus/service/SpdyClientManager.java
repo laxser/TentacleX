@@ -14,7 +14,10 @@ import com.laxser.tentaclex.octopus.spdy.PowerfulSpdyClient;
 
 /**
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午8:54:16
+@contact [duqifan@gmail.com]
+@SpdyClientManager.java
+
  */
 public class SpdyClientManager {
 

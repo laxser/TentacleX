@@ -12,8 +12,10 @@ import com.laxser.tentaclex.commons.spdy.frame.FrameFactory;
 /**
  * 把ChannelBuffer对象还原为Frame对象
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-5-31 下午4:57:29
+@contact [duqifan@gmail.com]
+@SPDYFrameDecoder.java
+
  */
 public class SPDYFrameDecoder extends FrameDecoder {
 

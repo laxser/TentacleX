@@ -12,12 +12,16 @@ import org.apache.zookeeper.ZooKeeper;
 
 import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
 import com.laxser.tentaclex.registry.TentacleServiceDescriptorBase;
+import com.laxser.tentaclex.util.PathUtil;
+import com.laxser.tentaclex.util.ZooKeeperUtil;
 
 /**
  * Registry相关的工具方法封装
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-20 上午11:21:35
+ * @author laxser  Date 2012-6-1 上午8:47:32
+@contact [duqifan@gmail.com]
+@RegistryHelper.java
+
  */
 public class RegistryHelper {
     

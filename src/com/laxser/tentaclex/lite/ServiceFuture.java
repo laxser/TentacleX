@@ -6,8 +6,10 @@ import java.util.concurrent.TimeUnit;
 /**
  * 封装一次异步调用的返回信息
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:24:42
+ * @author laxser  Date 2012-6-1 上午8:55:34
+@contact [duqifan@gmail.com]
+@ServiceFuture.java
+
  * @param <T>
  */
 public interface ServiceFuture<T> {

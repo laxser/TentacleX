@@ -7,8 +7,10 @@ import java.util.Map.Entry;
 import com.laxser.tentaclex.Method;
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-8 下午07:15:13
+ * @author laxser  Date 2012-6-1 上午8:54:34
+@contact [duqifan@gmail.com]
+@TentacleEntityEnclosingMethod.java
+
  */
 public abstract class TentacleEntityEnclosingMethod extends Method {
 

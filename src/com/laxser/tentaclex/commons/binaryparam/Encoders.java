@@ -8,6 +8,14 @@ import com.laxser.tentaclex.commons.binaryparam.impl.encoder.JsonEncoder;
 import com.laxser.tentaclex.commons.binaryparam.impl.encoder.RawEncoder;
 
 
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-5-31
+ * time 下午4:54:20
+ */
 public class Encoders {
 
     private static Map<ParamFormat, Encoder> encoders = new HashMap<ParamFormat, Encoder>();

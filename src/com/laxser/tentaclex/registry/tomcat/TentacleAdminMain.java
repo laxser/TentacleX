@@ -7,8 +7,10 @@ import java.io.InputStreamReader;
 /**
  * xoa admin console主程序
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-4-12 下午06:59:51
+ * @author laxser  Date 2012-6-1 上午8:47:01
+@contact [duqifan@gmail.com]
+@TentacleAdminMain.java
+
  */
 public class TentacleAdminMain {
 

@@ -8,8 +8,10 @@ import org.apache.zookeeper.Watcher;
  * 
  * 什么也不做的一个空的Watcher
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-17 下午05:21:06
+ *@author laxser  Date 2012-6-1 上午8:47:18
+@contact [duqifan@gmail.com]
+@DummyWatcher.java
+
  */
 public class DummyWatcher implements Watcher {
 

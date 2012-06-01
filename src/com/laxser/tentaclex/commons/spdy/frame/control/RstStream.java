@@ -22,7 +22,10 @@ import com.laxser.tentaclex.commons.spdy.frame.DefaultControlFrame;
  *   +-------------------------------+
  * </pre>
  * 
- * @author Lookis (lookisliu@gmail.com)
+ *@author laxser  Date 2012-6-1 上午9:01:48
+@contact [duqifan@gmail.com]
+@RstStream.java
+
  * 
  */
 public class RstStream extends DefaultControlFrame {

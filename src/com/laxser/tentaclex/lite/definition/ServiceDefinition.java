@@ -3,8 +3,10 @@ package com.laxser.tentaclex.lite.definition;
 /**
  * 一个XOA service的定义
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-17 下午12:04:33
+ * @author laxser  Date 2012-6-1 上午8:56:37
+@contact [duqifan@gmail.com]
+@ServiceDefinition.java
+
  */
 public class ServiceDefinition {
 

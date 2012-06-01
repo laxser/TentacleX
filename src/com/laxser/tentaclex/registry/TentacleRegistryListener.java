@@ -5,8 +5,10 @@ package com.laxser.tentaclex.registry;
  * Registry中的配置信息发生变更的时候会触发{@link TentacleRegistryListener}
  * 中的相关事件处理方法
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-4-26 上午11:01:43
+ * @author laxser  Date 2012-6-1 上午8:46:20
+@contact [duqifan@gmail.com]
+@TentacleRegistryListener.java
+
  */
 public interface TentacleRegistryListener {
     

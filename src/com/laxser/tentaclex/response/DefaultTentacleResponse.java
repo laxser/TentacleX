@@ -23,8 +23,10 @@ import com.laxser.tentaclex.jackson.ObjectMapperFactory;
 /**
  * XoaResponse的默认实现
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午05:37:55
+ * @author laxser  Date 2012-5-31 下午4:48:45
+@contact [duqifan@gmail.com]
+@DefaultTentacleResponse.java
+
  */
 public class DefaultTentacleResponse implements TentacleResponse {
 

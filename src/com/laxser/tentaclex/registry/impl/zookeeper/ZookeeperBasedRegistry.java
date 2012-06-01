@@ -14,12 +14,15 @@ import org.apache.zookeeper.data.Stat;
 import com.laxser.tentaclex.registry.AbstractTentacleRegistry;
 import com.laxser.tentaclex.registry.TentacleService;
 import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
+import com.laxser.tentaclex.util.PathUtil;
 
 /**
  * 基于Zookeeper的registry实现
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-2-20 下午04:48:17
+ * @author laxser  Date 2012-6-1 上午8:47:38
+@contact [duqifan@gmail.com]
+@ZookeeperBasedRegistry.java
+
  */
 public class ZookeeperBasedRegistry extends AbstractTentacleRegistry {
 	

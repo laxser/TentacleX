@@ -2,8 +2,10 @@ package com.laxser.tentaclex.http;
 
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-9 下午02:38:50
+ * @author laxser  Date 2012-5-31 下午4:49:19
+@contact [duqifan@gmail.com]
+@HttpClientFactory.java
+
  */
 public class HttpClientFactory {
 

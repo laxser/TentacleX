@@ -3,8 +3,10 @@ package com.laxser.tentaclex.lite.definition;
 /**
  * XOA请求的header的定义
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:26:09
+ * @author laxser  Date 2012-6-1 上午8:56:21
+@contact [duqifan@gmail.com]
+@HeaderDefinition.java
+
  */
 public class HeaderDefinition {
 	

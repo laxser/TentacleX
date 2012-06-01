@@ -7,8 +7,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
 /**
  * The default {@link Frame} implementation.
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午8:58:34
+@contact [duqifan@gmail.com]
+@DefaultFrame.java
+
  */
 public abstract class DefaultFrame implements Frame {
 

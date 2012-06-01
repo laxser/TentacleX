@@ -4,7 +4,10 @@
 package com.laxser.tentaclex.commons.exception;
 
 /**
- * @author Lookis (lookisliu@gmail.com)
+ * @author laxser  Date 2012-5-31 下午4:47:19
+@contact [duqifan@gmail.com]
+@TentacleXException.java
+
  * 
  */
 public class TentacleXException extends RuntimeException {

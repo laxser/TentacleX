@@ -6,7 +6,10 @@ package com.laxser.tentaclex.commons.spdy;
 import java.util.Arrays;
 
 /**
- * @author Lookis (lookisliu@gmail.com)
+ * @author laxser  Date 2012-6-1 上午8:57:50
+@contact [duqifan@gmail.com]
+@Utils.java
+
  * 
  */
 public class Utils {

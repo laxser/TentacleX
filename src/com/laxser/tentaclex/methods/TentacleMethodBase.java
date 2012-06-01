@@ -5,8 +5,10 @@ import com.laxser.tentaclex.Method;
 /**
  * {@link Method}的基类实现
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:35:46
+ * @author laxser  Date 2012-6-1 上午8:54:44
+@contact [duqifan@gmail.com]
+@TentacleMethodBase.java
+
  */
 public abstract class TentacleMethodBase {/*implements Method {
 

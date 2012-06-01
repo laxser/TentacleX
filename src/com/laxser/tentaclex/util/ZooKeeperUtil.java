@@ -1,4 +1,4 @@
-package com.laxser.tentaclex.registry.impl.zookeeper;
+package com.laxser.tentaclex.util;
 
 import java.util.Collections;
 
@@ -14,8 +14,10 @@ import org.apache.zookeeper.data.Stat;
 /**
  * ZooKeeper相关工具
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-9-21 下午06:07:49
+ * @author laxser  Date 2012-6-1 上午8:47:50
+@contact [duqifan@gmail.com]
+@ZooKeeperUtil.java
+
  */
 public class ZooKeeperUtil {
 

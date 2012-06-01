@@ -7,8 +7,10 @@ import com.laxser.tentaclex.commons.spdy.frame.StreamIdentifiableFrame;
 /**
  * 和Stream相关的，能通过streamId来唯一确定的ControlFrame
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-6-10 下午04:49:18
+ * @author laxser  Date 2012-6-1 上午9:00:48
+@contact [duqifan@gmail.com]
+@StreamIdentifiableControlFrame.java
+
  */
 public abstract class StreamIdentifiableControlFrame extends DefaultControlFrame implements
 		StreamIdentifiableFrame {

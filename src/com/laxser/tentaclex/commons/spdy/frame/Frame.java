@@ -7,7 +7,10 @@ import org.jboss.netty.buffer.ChannelBuffer;
 /**
  * 对应SPDY里的帧对象
  * 
- * @author Lookis (lookisliu@gmail.com)
+ * @author laxser  Date 2012-6-1 上午8:58:26
+@contact [duqifan@gmail.com]
+@Frame.java
+
  * 
  */
 public interface Frame extends Serializable {

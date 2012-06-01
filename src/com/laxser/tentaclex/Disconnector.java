@@ -19,8 +19,10 @@ import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
 /**
  * 负责在某个服务节点充registry中删除或者去掉的时候，断开与其服务器的连接
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-4-27 上午11:28:23
+ * @author laxser  Date 2012-6-1 上午8:44:52
+@contact [duqifan@gmail.com]
+@Disconnector.java
+
  */
 public class Disconnector implements TentacleRegistryListener {
 

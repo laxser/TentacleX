@@ -20,8 +20,10 @@ import com.laxser.tentaclex.commons.spdy.frame.ControlFrame;
  *   |              ...                 |
  * </pre>
  * 
- * @author Lookis (lookisliu@gmail.com)
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午9:00:39
+@contact [duqifan@gmail.com]
+@SynReply.java
+
  */
 public abstract class SynReply extends StreamIdentifiableControlFrame {
 

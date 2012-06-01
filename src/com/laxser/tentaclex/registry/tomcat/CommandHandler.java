@@ -17,8 +17,10 @@ import com.laxser.tentaclex.registry.impl.zookeeper.ZookeeperBasedRegistry;
 /**
  * 命令处理器
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-3-30 下午12:43:35
+ * @author laxser  Date 2012-6-1 上午8:46:44
+@contact [duqifan@gmail.com]
+@CommandHandler.java
+
  */
 public class CommandHandler {
     

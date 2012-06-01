@@ -2,7 +2,14 @@ package com.laxser.tentaclex.octopus.spdy;
 
 import java.net.InetSocketAddress;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-6-1
+ * time 上午8:53:34
+ */
 public class Main {
 
     public static void main(String[] args) {

@@ -5,7 +5,10 @@ import java.util.List;
 
 /**
  * 封装�?��XOA服务的配置信�? * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ *@author laxser  Date 2012-6-1 上午8:46:14
+@contact [duqifan@gmail.com]
+@TentacleService.java
+
  */
 public class TentacleService {
 

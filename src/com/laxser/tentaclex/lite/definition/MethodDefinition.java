@@ -11,8 +11,10 @@ import java.util.Map;
 /**
  * XOA方法的定义
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-17 下午12:04:57
+ * @author laxser  Date 2012-6-1 上午8:56:27
+@contact [duqifan@gmail.com]
+@MethodDefinition.java
+
  */
 public class MethodDefinition {
 

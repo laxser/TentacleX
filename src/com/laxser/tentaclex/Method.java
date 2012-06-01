@@ -20,8 +20,10 @@ import com.laxser.tentaclex.methods.TentaclePostMethod;
  * 
  * 方法的定位采用了REST的设计思想。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 上午11:47:52
+ * @author laxser  Date 2012-6-1 上午8:44:42
+@contact [duqifan@gmail.com]
+@Method.java
+
  */
 public abstract class Method {
 	

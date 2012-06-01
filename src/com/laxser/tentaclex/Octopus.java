@@ -45,8 +45,10 @@ import com.laxser.tentaclex.response.DefaultTentacleResponse;
  * 
  * XoaClient中的每个方法都是线程安全的，所以建议尽量复用同一个XoaClient实例。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:31:40
+ *@author laxser  Date 2012-5-31 下午4:48:04
+@contact [duqifan@gmail.com]
+@Octopus.java
+
  */
 public class Octopus implements Tentacle {
 

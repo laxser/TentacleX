@@ -6,9 +6,10 @@ import com.laxser.tentaclex.Method;
 
 /**
  * 没有方法体的方法
- * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:36:57
+ * @author laxser  Date 2012-6-1 上午8:54:24
+@contact [duqifan@gmail.com]
+@TentacleBodilessMethod.java
+
  */
 public abstract class TentacleBodilessMethod extends Method {
 

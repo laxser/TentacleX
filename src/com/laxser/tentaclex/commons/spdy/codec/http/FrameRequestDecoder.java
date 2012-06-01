@@ -30,7 +30,10 @@ import com.laxser.tentaclex.commons.spdy.frame.control.SynStream;
 /**
  * 把Frame对象(串)还原为HttpRequest对象
  * 
- * @author Lookis (lookisliu@gmail.com), Weibo Li
+ * @author laxser  Date 2012-5-31 下午4:58:03
+@contact [duqifan@gmail.com]
+@FrameRequestDecoder.java
+
  * 
  */
 

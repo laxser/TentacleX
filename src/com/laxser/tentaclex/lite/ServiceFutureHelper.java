@@ -13,8 +13,10 @@ import com.laxser.tentaclex.lite.throughput.ThroughputCounter;
 /**
  * {@link ServiceFuture}的辅助类，封装一些工具方法，隐藏实现细节
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-1-17 下午05:01:46
+ * @author laxser  Date 2012-6-1 上午8:55:27
+@contact [duqifan@gmail.com]
+@ServiceFutureHelper.java
+
  */
 public class ServiceFutureHelper {
 

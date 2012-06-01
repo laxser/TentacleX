@@ -37,8 +37,10 @@ import com.laxser.tentaclex.octopus.spdy.netty.TentacleClientPipelineFactory;
  * 
  * 改良的Spdy client测试中
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-5-10 下午06:13:44
+ * @author laxser  Date 2012-6-1 上午8:53:28
+@contact [duqifan@gmail.com]
+@PowerfulSpdyClient.java
+
  */
 @ChannelPipelineCoverage("one")
 public class PowerfulSpdyClient extends SimpleChannelUpstreamHandler implements SpdyClient {

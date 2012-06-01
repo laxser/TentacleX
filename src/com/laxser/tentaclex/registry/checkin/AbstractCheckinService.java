@@ -4,7 +4,14 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-6-1
+ * time 上午8:53:15
+ */
 public abstract class AbstractCheckinService implements ClientCheckinService {
     
     private static final ExecutorService exe = Executors.newFixedThreadPool(1);

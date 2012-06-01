@@ -5,8 +5,10 @@ import com.laxser.tentaclex.commons.exception.TentacleXException;
 /**
  * Thrown when service not found for specified serviceId. 
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-5-28 下午03:11:45
+ * @author laxser  Date 2012-6-1 上午8:44:36
+@contact [duqifan@gmail.com]
+@ServiceNotFoundException.java
+
  */
 public class ServiceNotFoundException extends TentacleXException {
 

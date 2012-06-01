@@ -5,8 +5,10 @@ import com.laxser.tentaclex.Tentacle;
 /**
  * 对Service接口进行封装的工厂
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:22:21
+ * @author laxser  Date 2012-6-1 上午8:55:39
+@contact [duqifan@gmail.com]
+@ServiceFactory.java
+
  */
 public interface ServiceFactory {
 	 

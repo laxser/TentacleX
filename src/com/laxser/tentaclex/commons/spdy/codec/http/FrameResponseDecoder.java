@@ -29,7 +29,9 @@ import com.laxser.tentaclex.commons.spdy.frame.control.SynReply;
 import com.laxser.tentaclex.commons.spdy.frame.control.SynStream;
 
 /**
- * @author Lookis (lookisliu@gmail.com)
+ * @author laxser  Date 2012-6-1 上午8:43:47
+@contact [duqifan@gmail.com]
+@FrameResponseDecoder.java
  * 
  */
 @ChannelPipelineCoverage("one")

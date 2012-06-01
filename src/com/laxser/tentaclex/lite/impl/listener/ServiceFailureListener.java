@@ -10,8 +10,10 @@ import com.laxser.tentaclex.lite.ServiceFutureListener;
  * 这个Listener可以向上层调用者返回数据，同时也可以抛出异常，返回值的
  * 类型和异常类型需要通过泛型来制定，而具体的逻辑则有onError方法来实现。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:25:40
+ * @author laxser  Date 2012-6-1 上午8:56:10
+@contact [duqifan@gmail.com]
+@ServiceFailureListener.java
+
  * @param <T> getReturn方法的返回值类型
  * @param <E> getReturn方法被调用时，可能抛出的异常
  */

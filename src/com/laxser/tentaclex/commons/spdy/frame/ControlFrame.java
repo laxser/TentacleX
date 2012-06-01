@@ -3,7 +3,10 @@ package com.laxser.tentaclex.commons.spdy.frame;
 /**
  * 控制帧
  * 
- * @author Lookis (lookisliu@gmail.com)
+ * @author laxser  Date 2012-6-1 上午8:59:25
+@contact [duqifan@gmail.com]
+@ControlFrame.java
+
  * 
  */
 public interface ControlFrame extends Frame {

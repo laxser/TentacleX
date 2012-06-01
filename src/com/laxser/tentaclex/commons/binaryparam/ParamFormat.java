@@ -2,8 +2,12 @@ package com.laxser.tentaclex.commons.binaryparam;
 
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-5-25 下午05:00:12
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-5-31
+ * time 下午4:55:39
  */
 public enum ParamFormat {
 

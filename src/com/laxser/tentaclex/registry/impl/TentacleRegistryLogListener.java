@@ -6,7 +6,12 @@ import org.apache.commons.logging.LogFactory;
 import com.laxser.tentaclex.registry.TentacleRegistryListener;
 import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-5-31
+ */
 public class TentacleRegistryLogListener implements TentacleRegistryListener {
 
     protected static Log logger = LogFactory.getLog(TentacleRegistryLogListener.class);

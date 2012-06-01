@@ -7,7 +7,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import com.laxser.tentaclex.commons.binaryparam.Encoder;
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-5-31
+ */
 public class JavaSerializationEncoder implements Encoder {
 
     @Override

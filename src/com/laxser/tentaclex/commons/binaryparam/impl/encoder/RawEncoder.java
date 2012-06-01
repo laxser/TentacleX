@@ -7,7 +7,14 @@ import java.net.URLEncoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoding;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-5-31
+ * time 下午4:54:53
+ */
 public class RawEncoder implements Encoder{
 
     @Override

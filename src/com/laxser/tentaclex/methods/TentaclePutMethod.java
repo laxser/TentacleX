@@ -3,8 +3,10 @@ package com.laxser.tentaclex.methods;
 /**
  * PUT方法
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:36:32
+ *@author laxser  Date 2012-6-1 上午8:55:05
+@contact [duqifan@gmail.com]
+@TentaclePutMethod.java
+
  */
 public class TentaclePutMethod extends TentacleBodilessMethod {
 

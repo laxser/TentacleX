@@ -3,8 +3,10 @@ package com.laxser.tentaclex.lite.definition;
 /**
  * XOA方法中的参数定义
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-19 下午06:27:24
+ *@author laxser  Date 2012-6-1 上午8:56:32
+@contact [duqifan@gmail.com]
+@ParamDefinition.java
+
  */
 public class ParamDefinition {
 	

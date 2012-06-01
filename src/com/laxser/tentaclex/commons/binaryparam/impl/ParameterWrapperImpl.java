@@ -9,8 +9,12 @@ import com.laxser.tentaclex.commons.binaryparam.ParameterWrapper;
 
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-5-26 上午11:55:49
+ * 
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-5-31
+ * time 下午4:54:35
  */
 public class ParameterWrapperImpl implements ParameterWrapper {
 

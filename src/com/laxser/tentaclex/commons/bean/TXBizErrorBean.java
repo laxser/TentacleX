@@ -3,8 +3,10 @@ package com.laxser.tentaclex.commons.bean;
 /**
  * 用来封装业务中的错误信息，以返回给客户端
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-7-28 下午02:53:38
+ * @author laxser  Date 2012-5-31 下午4:49:31
+@contact [duqifan@gmail.com]
+@TXBizErrorBean.java
+
  */
 public class TXBizErrorBean {
 

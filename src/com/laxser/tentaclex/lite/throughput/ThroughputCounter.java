@@ -6,8 +6,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-7-14 下午06:43:01
+ * @author laxser  Date 2012-6-1 上午8:56:03
+@contact [duqifan@gmail.com]
+@ThroughputCounter.java
+
  */
 public class ThroughputCounter {
 

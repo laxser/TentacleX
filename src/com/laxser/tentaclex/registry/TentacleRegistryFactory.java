@@ -6,8 +6,10 @@ import com.laxser.tentaclex.registry.impl.zookeeper.ZookeeperBasedRegistry;
  * 
  * XoaRegistry工厂
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-25 上午11:42:55
+ *@author laxser  Date 2012-6-1 上午8:46:26
+@contact [duqifan@gmail.com]
+@TentacleRegistryFactory.java
+
  */
 public class TentacleRegistryFactory {
 

@@ -13,7 +13,12 @@ import org.codehaus.jackson.map.annotate.JsonSerialize;
 import com.laxser.tentaclex.commons.binaryparam.Encoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoding;
 
-
+/**
+ * 
+ * @author laxser
+ * @ contact qifan.du@renren-inc.com
+ * date: 2012-5-31
+ */
 public class JsonEncoder implements Encoder{
 
     private static ObjectMapper mapper;

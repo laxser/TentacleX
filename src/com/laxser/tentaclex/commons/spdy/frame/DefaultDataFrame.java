@@ -5,7 +5,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
 /**
  * The default {@link DataFrame} implementation.
  * 
- * @author Lookis (lookisliu@gmail.com)
+ *@author laxser  Date 2012-6-1 上午8:58:47
+@contact [duqifan@gmail.com]
+@DefaultDataFrame.java
+
  * 
  * @deprecated 被更优化的实现所取代
  * 

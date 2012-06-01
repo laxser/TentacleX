@@ -7,9 +7,10 @@ import org.jboss.netty.handler.codec.http.HttpVersion;
 /**
  * Represents the http request wrapped by a SPDY stream.
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-2 上午10:54:55
- */
+ *@author laxser  Date 2012-5-31 下午4:56:52
+@contact [duqifan@gmail.com]
+@SpdyHttpRequest.java
+*/
 public class SpdyHttpRequest extends DefaultHttpRequest {
 
 	/**

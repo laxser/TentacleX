@@ -14,8 +14,10 @@ import com.laxser.tentaclex.registry.TentacleServiceDescriptorBase;
 /**
  * 简单的XoaRegistry实现，可用于本地调试
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-25 上午11:49:30
+ * @author laxser  Date 2012-6-1 上午8:47:10
+@contact [duqifan@gmail.com]
+@SimpleTentacleRegistry.java
+
  */
 public class SimpleTentacleRegistry extends AbstractTentacleRegistry {
 	

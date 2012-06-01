@@ -1,5 +1,11 @@
 package com.laxser.tentaclex;
-
+/**
+ * @author laxser
+ * @ contact duqifan@gmail.com
+ * TentacleX 计划
+ * date: 2012-6-1
+ * time 上午8:44:58
+ */
 public class DefaultInvocationInfo implements InvocationInfo {
 
 	private static final long serialVersionUID = 1L;

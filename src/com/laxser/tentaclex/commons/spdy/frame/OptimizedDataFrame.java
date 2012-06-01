@@ -8,8 +8,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
 /**
  * The optimized {@link DataFrame} implementation.
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @author Lookis (lookisliu@gmail.com)
+ *@author laxser  Date 2012-6-1 上午8:58:07
+@contact [duqifan@gmail.com]
+@OptimizedDataFrame.java
+
  */
 public class OptimizedDataFrame extends DefaultFrame implements DataFrame{
 

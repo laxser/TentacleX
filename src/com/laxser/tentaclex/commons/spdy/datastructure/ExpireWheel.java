@@ -10,8 +10,10 @@ package com.laxser.tentaclex.commons.spdy.datastructure;
  * 但是这个数据结构是一个弱约束的结构，需要外部调用程序来保证传入的id是等步长增长的，即
  * 1,2,3,5...或2,4,6,7,8...或1,3,5,7...等。
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-4-4 下午08:09:09
+ *@author laxser  Date 2012-6-1 上午9:03:27
+@contact [duqifan@gmail.com]
+@ExpireWheel.java
+
  * @param <T>
  */
 public class ExpireWheel<T> {

@@ -5,8 +5,10 @@ package com.laxser.tentaclex;
 /**
  * 表示一次Xoa调用的返回值
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-3-3 下午04:34:09
+ * @author laxser  Date 2012-6-1 上午8:44:18
+@contact [duqifan@gmail.com]
+@TentacleResponse.java
+
  */
 public interface TentacleResponse {
 

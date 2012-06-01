@@ -13,6 +13,11 @@ public class ClassUtils {
 	 * reference as well).
 	 * @return the default ClassLoader (never <code>null</code>)
 	 * @see java.lang.Thread#getContextClassLoader()
+	 * 
+	 * @author laxser  Date 2012-6-1 上午8:45:33
+@contact [duqifan@gmail.com]
+@ClassUtils.java
+
 	 */
 	public static ClassLoader getDefaultClassLoader() {
 		ClassLoader cl = null;
