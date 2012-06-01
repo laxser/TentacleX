@@ -18,6 +18,7 @@ import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
 
 /**
  * 负责在某个服务节点充registry中删除或者去掉的时候，断开与其服务器的连接
+ * 也就是把触手和章鱼都干掉
  * 
  * @author laxser  Date 2012-6-1 上午8:44:52
 @contact [duqifan@gmail.com]

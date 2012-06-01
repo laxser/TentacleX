@@ -4,7 +4,7 @@ import com.laxser.tentaclex.commons.exception.TentacleXException;
 
 /**
  * 
- * XOA调用返回的{@link TentacleResponse}的status code不是200(OK)时抛出此异常
+ * Tentacle调用返回的{@link TentacleResponse}的status code不是200(OK)时抛出此异常
  * 
  * @author laxser  Date 2012-6-1 上午8:44:31
 @contact [duqifan@gmail.com]

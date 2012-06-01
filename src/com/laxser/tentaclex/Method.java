@@ -16,7 +16,7 @@ import com.laxser.tentaclex.methods.TentacleMultiFormatPostMethod;
 import com.laxser.tentaclex.methods.TentaclePostMethod;
 
 /**
- * 用来表示要调用的XOA方法。
+ * 表示调用的TX方法
  * 
  * 方法的定位采用了REST的设计思想。
  * 
@@ -61,7 +61,7 @@ public abstract class Method {
 	
 	public static Method put(String url) {
 		
-		//借助服务器端rose的特性，用post方法来伪造put方法，
+		//借助服务器端blitz的特性，用post方法来伪造put方法，
 		//解决put方法没有body的问题
 		Method method = new TentaclePostMethod();
 		resolveUrl(url, method);
@@ -280,7 +280,7 @@ public abstract class Method {
 	
 	public String getUrl() {
 		StringBuilder sb = new StringBuilder(50);
-		sb.append("xoa://");
+		sb.append("xoa://"); //这里改成tx
 		sb.append(serviceId);
 		if (port != -1) {
 			sb.append(":");

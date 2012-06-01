@@ -41,9 +41,10 @@ import com.laxser.tentaclex.response.DefaultTentacleResponse;
 
 
 /**
- * XOA服务的client。
+ * TentacleX 服务的客户端，非常形象。Octopus发出一条条的Tentacle，作为一个客户端，Octopus的每条方法都是线程安全的。
+ * 因此“触手”用完了不要扔掉，尽量复用
  * 
- * XoaClient中的每个方法都是线程安全的，所以建议尽量复用同一个XoaClient实例。
+ * 
  * 
  *@author laxser  Date 2012-5-31 下午4:48:04
 @contact [duqifan@gmail.com]
@@ -52,7 +53,7 @@ import com.laxser.tentaclex.response.DefaultTentacleResponse;
  */
 public class Octopus implements Tentacle {
 
-    public static final String VERSION = "XOA-Client/0.41";
+    public static final String VERSION = "TentacleX-Client/1.0";
     
 	public static final String PROTOCOL_HTTP = "http";
 
@@ -108,7 +109,7 @@ public class Octopus implements Tentacle {
 				OperationFuture of = (OperationFuture) future;
 		        InvocationInfo info = of.invocationInfo;
 		        StringBuilder sb = new StringBuilder();
-	            sb.append("XOA timeout in ");
+	            sb.append("Tentacle timeout in ");
 	            sb.append(endTime - startTime);
 	            sb.append(" ms: ");
 	            sb.append(info.getMethodName());

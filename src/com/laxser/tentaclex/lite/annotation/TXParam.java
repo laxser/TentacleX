@@ -10,8 +10,9 @@ import java.lang.annotation.Target;
 /**
  * 标注一次XOA调用中的参数
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-11-17 下午03:15:23
+ *@author laxser  Date 2012-6-1 上午9:33:52
+@contact [duqifan@gmail.com]
+@TXParam.java
  */
 @Target( { ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)

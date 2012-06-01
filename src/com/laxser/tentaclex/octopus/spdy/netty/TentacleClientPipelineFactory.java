@@ -13,7 +13,10 @@ import com.laxser.tentaclex.commons.spdy.codec.http.MultiFrameResponseDecoder;
 /**
  * Client端的{@link ChannelPipelineFactory}
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-1 上午9:33:32
+@contact [duqifan@gmail.com]
+@TentacleClientPipelineFactory.java
+
  */
 public class TentacleClientPipelineFactory implements ChannelPipelineFactory {
 

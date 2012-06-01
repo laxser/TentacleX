@@ -3,7 +3,7 @@ package com.laxser.tentaclex;
 import com.laxser.tentaclex.Octopus.TentacleResponseCallback;
 
 /**
- * XoaClient的接口
+ * TentacleX的接口，也就是章鱼的触手，负责提交
  * 
  *@author laxser  Date 2012-6-1 上午8:44:24
 @contact [duqifan@gmail.com]

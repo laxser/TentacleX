@@ -12,8 +12,10 @@ import com.laxser.tentaclex.commons.thread.NioThreadFactory;
  * 这个类存在的意义在于封装唯一的NioClientSocketChannelFactory实例，
  * 保证不创建多余的IO线程
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-6-4 下午03:05:34
+ * @author laxser  Date 2012-6-1 上午9:33:14
+@contact [duqifan@gmail.com]
+@ChannelFactoryManager.java
+
  */
 public class ChannelFactoryManager {
 

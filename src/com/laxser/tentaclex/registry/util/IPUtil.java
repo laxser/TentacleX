@@ -5,8 +5,10 @@ import java.net.UnknownHostException;
 
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2011-5-4 下午12:40:48
+ * @author laxser  Date 2012-6-1 上午9:34:10
+@contact [duqifan@gmail.com]
+@IPUtil.java
+
  */
 public class IPUtil {
 

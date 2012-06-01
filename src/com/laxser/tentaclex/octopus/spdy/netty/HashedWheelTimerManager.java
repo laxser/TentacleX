@@ -3,8 +3,10 @@ package com.laxser.tentaclex.octopus.spdy.netty;
 import org.jboss.netty.util.HashedWheelTimer;
 
 /**
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
- * @since 2010-5-24 下午03:09:25
+ * @author laxser  Date 2012-6-1 上午9:33:26
+@contact [duqifan@gmail.com]
+@HashedWheelTimerManager.java
+
  */
 public class HashedWheelTimerManager {
 
