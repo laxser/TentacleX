@@ -29,12 +29,7 @@ public interface TentacleResponse {
 	 */
 	public String getHeader(String headerName);
 	
-	/**
-	 * 将返回值封装成klass类型的对象并返回
-	 * 
-	 * @param klass
-	 * @return klass类型的对象
-	 */
+	
 	/**
 	 * 将返回值封装成指定的JavaBean对象类型并返回
 	 * 
