@@ -26,7 +26,10 @@ import com.laxser.tentaclex.commons.spdy.datastructure.NameValueBlock;
  *   |              ...                 |
  * </pre>
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-4 下午1:58:31
+@contact [duqifan@gmail.com]
+@OptimizedSynReply.java
+
  */
 public class OptimizedSynReply extends SynReply {
 

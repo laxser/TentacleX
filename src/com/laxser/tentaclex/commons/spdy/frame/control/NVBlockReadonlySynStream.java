@@ -28,7 +28,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
  *   |             ...                  |
  * </pre>
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-4 下午1:58:16
+@contact [duqifan@gmail.com]
+@NVBlockReadonlySynStream.java
+
  */
 public class NVBlockReadonlySynStream extends SynStream {
 
