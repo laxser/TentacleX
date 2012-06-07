@@ -16,8 +16,15 @@ import com.laxser.tentaclex.commons.binaryparam.impl.encoder.RawEncoder;
  * date: 2012-5-31
  * time 下午4:54:20
  */
+
 public class Encoders {
 
+	/**
+	 * @author laxser  Date 2012-6-4 下午3:08:47
+@contact [duqifan@gmail.com] //leap ahead
+@Encoders.java
+
+	 */
     private static Map<ParamFormat, Encoder> encoders = new HashMap<ParamFormat, Encoder>();
 
     static {

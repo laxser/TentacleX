@@ -26,7 +26,10 @@ import com.laxser.tentaclex.commons.spdy.Utils;
  *   |              ...                 |
  * </pre>
  * 
- * @author Li Weibo (weibo.leo@gmail.com) //I believe spring-brother
+ * @author laxser  Date 2012-6-4 下午1:53:36
+@contact [duqifan@gmail.com]
+@NVBlockReadonlySynReply.java
+
  */
 public class NVBlockReadonlySynReply extends SynReply {
 
