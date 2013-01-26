@@ -1,7 +1,8 @@
 package com.laxser.tentaclex.jackson;
 
-import org.codehaus.jackson.map.DeserializationConfig;
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * 由于{@link ObjectMapper}是带缓存的，所以通过{@link ObjectMapperFactory} 来获取
@@ -33,7 +34,7 @@ public class ObjectMapperFactory {
 	private void initObjectMapper() {
 		mapper = new ObjectMapper();
 		//disable掉FAIL_ON_UNKNOWN_PROPERTIES属性，增强容错性
-		mapper.getDeserializationConfig().disable(
-				DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES);
-	}
+		   mapper.disable(
+	                DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+	    }
 }

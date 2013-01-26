@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 标注一次XOA调用中的参数
+ * 标注一次tx调用中的参数
  * 
  *@author laxser  Date 2012-6-1 上午9:33:52
 @contact [duqifan@gmail.com]

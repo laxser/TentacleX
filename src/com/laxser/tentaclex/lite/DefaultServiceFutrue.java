@@ -61,9 +61,9 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
 	private Method method;
 	
 	/**
-	 * 此次调用使用的XoaClient
+	 * 此次调用使用的txClient
 	 */
-	private Tentacle xoaClient;
+	private Tentacle txClient;
 	
 	/**
 	 * 是否可以被cancel
@@ -101,7 +101,7 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
 	private Type contentType;
 	
 	/**
-	 * 本次XOA调用相关的信息
+	 * 本次tx调用相关的信息
 	 */
 	private InvocationInfo invocationInfo;
 	
@@ -118,8 +118,8 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
 		this.method = method;
 	}
 
-	void setXoaClient(Tentacle xoaClient) {
-		this.xoaClient = xoaClient;
+	void settxClient(Tentacle txClient) {
+		this.txClient = txClient;
 	}
 	
 	/**
@@ -434,7 +434,7 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
     }
 	
 	/*@Override
-	public XoaResponse getResponse() {
+	public txResponse getResponse() {
 		return response;
 	}*/
 
@@ -473,7 +473,7 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
 	public ServiceFuture<T> submit() {
 		final DefaultServiceFutrue<?> future = this;
 		final Method method = this.method;
-		invocationInfo = this.xoaClient.submit(method, new TentacleResponseCallback() {
+		invocationInfo = this.txClient.submit(method, new TentacleResponseCallback() {
 			@Override
 			public void responseReceived(TentacleResponse response) {
 				future.setResponse(response);
@@ -519,10 +519,15 @@ public class DefaultServiceFutrue<T> implements ServiceFuture<T> {
 	}
 	
 	/**
-	 * @return 本次XOA调用相关的信息
+	 * @return 本次tx调用相关的信息
 	 */
 	InvocationInfo getInvocationInfo() {
 		return this.invocationInfo;
+	}
+
+	public void setTxClient(Tentacle client) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

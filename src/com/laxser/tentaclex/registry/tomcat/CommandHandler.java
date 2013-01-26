@@ -24,7 +24,7 @@ import com.laxser.tentaclex.registry.impl.zookeeper.ZookeeperBasedRegistry;
  */
 public class CommandHandler {
     
-    private static final String XOA_CONSOLE = "xoa-console>";
+    private static final String TX_CONSOLE = "tx-console>";
     
     private static final String CMD_QUIT = "quit";
     
@@ -34,7 +34,7 @@ public class CommandHandler {
     
     private static String HELP = "Commands: \r\n" + 
         "    server list this \t#List services running on this node \r\n" +
-        "    server list all \t#List all services running on XOA-Grid associated with this node \r\n" +
+        "    server list all \t#List all services running on TX-Grid associated with this node \r\n" +
         "    server disable this \t#Disable all services on this node \r\n" + 
         "    server enable this \t#Enable all services ont this node \r\n" +
         "    server disable [serviceId] [ip:port] \t#Disable the given service node specified by ip and port \r\n" + 
@@ -89,7 +89,7 @@ public class CommandHandler {
                     
                     List<TentacleServiceDescriptor> services = serverListThis();
                     println("");
-                    println("Services running on XOA-Grid associated with this node: ");
+                    println("Services running on TX-Grid associated with this node: ");
                     for (TentacleServiceDescriptor service : services) {
                         String serviceId = service.getServiceId();
                         
@@ -248,7 +248,7 @@ public class CommandHandler {
      */
     public void printConsoleMark() {
         println("");
-        print(XOA_CONSOLE);
+        print(TX_CONSOLE);
     }
     
     private void print(Object o) {

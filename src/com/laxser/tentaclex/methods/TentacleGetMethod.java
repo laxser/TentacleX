@@ -11,7 +11,7 @@ package com.laxser.tentaclex.methods;
  */
 public class TentacleGetMethod extends TentacleBodilessMethod {
 
-	/*public XoaGetMethod(String domain, String path) {
+	/*public txGetMethod(String domain, String path) {
 		super(domain, path);
 	}*/
 	

@@ -3,7 +3,7 @@ package com.laxser.tentaclex.registry;
 import java.util.Comparator;
 
 /**
- * Xoa服务描述符，用以表示提供服务的真实机器的IP地址和端�? * 
+ * tx服务描述符，用以表示提供服务的真实机器的IP地址和端�? * 
  * @author laxser  Date 2012-6-1 上午8:46:07
 @contact [duqifan@gmail.com]
 @TentacleServiceDescriptor.java

@@ -1,7 +1,7 @@
 package com.laxser.tentaclex.lite.definition;
 
 /**
- * XOA方法中的参数定义
+ * tx方法中的参数定义
  * 
  *@author laxser  Date 2012-6-1 上午8:56:32
 @contact [duqifan@gmail.com]
@@ -16,7 +16,7 @@ public class ParamDefinition {
 	private String paramName;
 	
 	/**
-	 * 是XOA方法的第几个参数
+	 * 是tx方法的第几个参数
 	 */
 	private int paramIndex;
 	

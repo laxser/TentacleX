@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * 封装�?��XOA服务的配置信�? * 
+ * 封装�?��tx服务的配置信�? * 
  *@author laxser  Date 2012-6-1 上午8:46:14
 @contact [duqifan@gmail.com]
 @TentacleService.java

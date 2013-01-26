@@ -10,7 +10,7 @@ package com.laxser.tentaclex.methods;
  */
 public class TentaclePutMethod extends TentacleBodilessMethod {
 
-	/*public XoaPutMethod(String domain, String path) {
+	/*public txPutMethod(String domain, String path) {
 		super(domain, path);
 	}*/
 

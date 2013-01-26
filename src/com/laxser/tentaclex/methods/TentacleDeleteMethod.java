@@ -10,7 +10,7 @@ package com.laxser.tentaclex.methods;
  */
 public class TentacleDeleteMethod extends TentacleBodilessMethod {
 
-	/*public XoaDeleteMethod(String domain, String path) {
+	/*public txDeleteMethod(String domain, String path) {
 		super(domain, path);
 	}*/
 

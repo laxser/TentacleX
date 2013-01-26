@@ -1,7 +1,7 @@
 package com.laxser.tentaclex.lite.definition;
 
 /**
- * XOA请求的header的定义
+ * tx请求的header的定义
  * 
  * @author laxser  Date 2012-6-1 上午8:56:21
 @contact [duqifan@gmail.com]

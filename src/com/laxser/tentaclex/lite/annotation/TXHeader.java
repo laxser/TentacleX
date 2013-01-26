@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 用于标注一次XOA调用中的Header信息
+ * 用于标注一次TX调用中的Header信息
  * 
  * @author laxser  Date 2012-6-1 上午8:56:55
 @contact [duqifan@gmail.com]

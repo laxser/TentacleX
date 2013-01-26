@@ -22,7 +22,7 @@ public @interface TXPost {
 	
     public static final String CONNTENT_TYPE_FORM = "application/x-www-form-urlencoded";
     
-    public static final String CONNTENT_TYPE_MULTIFORMAT = "application/xoa-multiformat";
+    public static final String CONNTENT_TYPE_MULTIFORMAT = "application/tx-multiformat";
     
 	/**
 	 * @return 要操作的资源的URI

@@ -14,7 +14,7 @@ import com.laxser.tentaclex.Method;
  */
 public abstract class TentacleEntityEnclosingMethod extends Method {
 
-	/*public XoaEntityEnclosingMethod(String domain, String path) {
+	/*public txEntityEnclosingMethod(String domain, String path) {
 		super(domain, path);
 	}*/
 	

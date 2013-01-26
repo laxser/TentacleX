@@ -76,7 +76,7 @@ public class Octopus implements Tentacle {
 	}
 	
 	/**
-	 * 执行指定的xoa方法
+	 * 执行指定的tx方法
 	 * 
 	 * @param method
 	 *            要执行的方法
@@ -150,13 +150,13 @@ public class Octopus implements Tentacle {
 		return ret;
 	}
 	
-	public InvocationInfo submit(Method xoaMethod, final TentacleResponseCallback callback) {
+	public InvocationInfo submit(Method txMethod, final TentacleResponseCallback callback) {
 		
 		DefaultInvocationInfo info = new DefaultInvocationInfo();
-		info.setMethodName(xoaMethod.getName().toString());
-		info.setUrl(xoaMethod.getUrl());
+		info.setMethodName(txMethod.getName().toString());
+		info.setUrl(txMethod.getUrl());
 		
-		String serviceId = xoaMethod.getServiceId();
+		String serviceId = txMethod.getServiceId();
 		TentacleServiceDescriptor desc = registry.queryService(serviceId);
 		if (desc == null) {
 			throw new ServiceNotFoundException(serviceId);
@@ -164,9 +164,9 @@ public class Octopus implements Tentacle {
 		
 		int port = desc.getPort();
 		
-		//如果xoaMethod中指定了端口，就覆盖掉registry中配置的
-		if (xoaMethod.getPort() != -1) {
-			port = xoaMethod.getPort();
+		//如果txMethod中指定了端口，就覆盖掉registry中配置的
+		if (txMethod.getPort() != -1) {
+			port = txMethod.getPort();
 		}
 		
 		//hostname + port就是host
@@ -199,7 +199,7 @@ public class Octopus implements Tentacle {
 			logger.debug("Find a healthy node of " + serviceId + ": " + client.getRemoteHost());
 		}
 		
-		SpdyHttpRequest shr = wrapSpdyHttpRequest(xoaMethod, virtualHost);
+		SpdyHttpRequest shr = wrapSpdyHttpRequest(txMethod, virtualHost);
 		final String healthyRealHost = client.getRemoteHost();
 		
 		info.setRemoteHost(healthyRealHost);
@@ -207,28 +207,28 @@ public class Octopus implements Tentacle {
 		client.send(shr, new ResponseObserver() {
 			@Override
 			public void messageReceived(SpdyHttpResponse response) {
-				DefaultTentacleResponse xoaResponse = new DefaultTentacleResponse();
-				xoaResponse.setRemoteHost(healthyRealHost);
-				xoaResponse.setStatusCode(response.getStatus().getCode());
+				DefaultTentacleResponse txResponse = new DefaultTentacleResponse();
+				txResponse.setRemoteHost(healthyRealHost);
+				txResponse.setStatusCode(response.getStatus().getCode());
 				ChannelBuffer buff = response.getContent();
 				int length = buff.readableBytes();
 				byte[] content = new byte[length];
 				buff.readBytes(content);
-				xoaResponse.setContent(content);
+				txResponse.setContent(content);
 				for (String headerName : response.getHeaderNames()) {
-					xoaResponse.setHeader(headerName, response.getHeader(headerName));
+					txResponse.setHeader(headerName, response.getHeader(headerName));
 				}
-				callback.responseReceived(xoaResponse);
+				callback.responseReceived(txResponse);
 			}
 		});
 		return info;
 	}
 	
-	private Future<TentacleResponse> submitMethodSpdy(Method xoaMethod) {
+	private Future<TentacleResponse> submitMethodSpdy(Method txMethod) {
 		final CountDownLatch latch = new CountDownLatch(1);
 		final OperationFuture<TentacleResponse> of = new OperationFuture<TentacleResponse>(
-				xoaMethod.getServiceId(), latch, DEFUALT_TIMEOUT);
-		InvocationInfo info = submit(xoaMethod, new TentacleResponseCallback() {
+				txMethod.getServiceId(), latch, DEFUALT_TIMEOUT);
+		InvocationInfo info = submit(txMethod, new TentacleResponseCallback() {
 			@Override
 			public void responseReceived(TentacleResponse response) {
 				of.set(response);
@@ -244,39 +244,39 @@ public class Octopus implements Tentacle {
 	}
 	
 	/**
-	 * 将一个XoaMethod转换为SpdyHttpRequest
+	 * 将一个txMethod转换为SpdyHttpRequest
 	 * 
-	 * @param xoaMethod
+	 * @param txMethod
 	 * @return
 	 */
-	private SpdyHttpRequest wrapSpdyHttpRequest(Method xoaMethod, String host) {
+	private SpdyHttpRequest wrapSpdyHttpRequest(Method txMethod, String host) {
 		
 		SpdyHttpRequest shr;
-		if (xoaMethod.getName() == TentacleMethodName.GET) {
+		if (txMethod.getName() == TentacleMethodName.GET) {
 			
-			TentacleGetMethod getMethod = (TentacleGetMethod)xoaMethod;
+			TentacleGetMethod getMethod = (TentacleGetMethod)txMethod;
 			shr = new SpdyHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.GET,
 					getMethod.getPathWithFullQueryString());
-		} else if (xoaMethod.getName() == TentacleMethodName.DELETE){
+		} else if (txMethod.getName() == TentacleMethodName.DELETE){
 			
-			TentacleDeleteMethod deleteMethod = (TentacleDeleteMethod)xoaMethod;
+			TentacleDeleteMethod deleteMethod = (TentacleDeleteMethod)txMethod;
 			shr = new SpdyHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.DELETE,
 					deleteMethod.getPathWithFullQueryString());
 		
-		} else if (xoaMethod.getName() == TentacleMethodName.PUT){
-			TentaclePutMethod putMethod = (TentaclePutMethod)xoaMethod;
+		} else if (txMethod.getName() == TentacleMethodName.PUT){
+			TentaclePutMethod putMethod = (TentaclePutMethod)txMethod;
 			shr = new SpdyHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.PUT,
 					putMethod.getPathWithFullQueryString());
-		} else if (xoaMethod instanceof TentacleEntityEnclosingMethod) {
-			TentacleEntityEnclosingMethod eeMethod = (TentacleEntityEnclosingMethod)xoaMethod;
-			if (xoaMethod.getName() == TentacleMethodName.POST) {
+		} else if (txMethod instanceof TentacleEntityEnclosingMethod) {
+			TentacleEntityEnclosingMethod eeMethod = (TentacleEntityEnclosingMethod)txMethod;
+			if (txMethod.getName() == TentacleMethodName.POST) {
 				shr = new SpdyHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST,
 						eeMethod.getPath());
-			} /*else if(xoaMethod.getName() == XoaMethodName.PUT) {
+			} /*else if(txMethod.getName() == XoaMethodName.PUT) {
 				shr = new SpdyHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.PUT,
 						eeMethod.getPath());
 			}*/ else {
-				throw new RuntimeException("Unsupported method:" + xoaMethod.getName());
+				throw new RuntimeException("Unsupported method:" + txMethod.getName());
 			}
 			
 			byte[] body = eeMethod.getBody();
@@ -287,8 +287,8 @@ public class Octopus implements Tentacle {
 			ChannelBuffer content = ChannelBuffers.wrappedBuffer(body);
 			shr.setContent(content);
 			
-			if (xoaMethod instanceof TentacleMultiFormatPostMethod) {
-			    shr.setHeader(HttpHeaders.Names.CONTENT_TYPE, "application/xoa-multiformat");
+			if (txMethod instanceof TentacleMultiFormatPostMethod) {
+			    shr.setHeader(HttpHeaders.Names.CONTENT_TYPE, "application/tx-multiformat");
 			} else {
 			    //有body的request才用Content-Type的header
 	            shr.setHeader(HttpHeaders.Names.CONTENT_TYPE, "application/x-www-form-urlencoded; charset=UTF-8");
@@ -296,7 +296,7 @@ public class Octopus implements Tentacle {
 			
 			
 		} else {
-			throw new RuntimeException("Unsupported method:" + xoaMethod.getName());
+			throw new RuntimeException("Unsupported method:" + txMethod.getName());
 		}
 		
 		shr.setHeader(HttpHeaders.Names.HOST, host);
@@ -314,7 +314,7 @@ public class Octopus implements Tentacle {
 		shr.setHeader(HttpHeaders.Names.USER_AGENT, VERSION);
 		
 		//copy headers
-		Map<String, String> headers = xoaMethod.getHeaders();
+		Map<String, String> headers = txMethod.getHeaders();
 		if (headers != null) {
 			for (Entry<String, String> entry : headers.entrySet()) {
 				shr.setHeader(entry.getKey(), entry.getValue());

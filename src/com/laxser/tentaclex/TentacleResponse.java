@@ -3,7 +3,7 @@ package com.laxser.tentaclex;
 
 
 /**
- * 表示一次Xoa调用的返回值
+ * 表示一次tx调用的返回值
  * 
  * @author laxser  Date 2012-6-1 上午8:44:18
 @contact [duqifan@gmail.com]

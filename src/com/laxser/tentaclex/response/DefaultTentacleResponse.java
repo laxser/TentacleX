@@ -13,15 +13,15 @@ import java.util.Map;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.InflaterInputStream;
 
-import org.codehaus.jackson.map.ObjectMapper;
 import org.jboss.netty.handler.codec.http.HttpHeaders;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.laxser.tentaclex.ContentParseException;
 import com.laxser.tentaclex.TentacleResponse;
 import com.laxser.tentaclex.jackson.ObjectMapperFactory;
 
 /**
- * XoaResponse的默认实现
+ * txResponse的默认实现
  * 
  * @author laxser  Date 2012-5-31 下午4:48:45
 @contact [duqifan@gmail.com]

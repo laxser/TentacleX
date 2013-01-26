@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * XOA方法的定义
+ * tx方法的定义
  * 
  * @author laxser  Date 2012-6-1 上午8:56:27
 @contact [duqifan@gmail.com]

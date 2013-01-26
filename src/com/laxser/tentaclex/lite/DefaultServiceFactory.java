@@ -26,13 +26,13 @@ public class DefaultServiceFactory implements ServiceFactory {
 	
 	protected Log logger = LogFactory.getLog(this.getClass());
 	
-	private Map<Class<?>, ServiceDefinition> xoaServices = new ConcurrentHashMap<Class<?>, ServiceDefinition>();
+	private Map<Class<?>, ServiceDefinition> txServices = new ConcurrentHashMap<Class<?>, ServiceDefinition>();
 	
 	@SuppressWarnings("unchecked")
 	@Override
 	public <T> T getService(Class<T> serviceInterface, Tentacle client) {
 		
-		ServiceDefinition servicdDef = xoaServices.get(serviceInterface);
+		ServiceDefinition servicdDef = txServices.get(serviceInterface);
 		
 		if (servicdDef == null) {
 			if (logger.isDebugEnabled()) {
@@ -40,11 +40,11 @@ public class DefaultServiceFactory implements ServiceFactory {
 			}
 			for (Annotation annotation : serviceInterface.getAnnotations()) {
 				if (annotation instanceof TXService) {
-					TXService xoaService = (TXService)annotation;
+					TXService txService = (TXService)annotation;
 					servicdDef = new ServiceDefinition();
-					servicdDef.setServiceId(xoaService.serviceId());
-					//servicdDef.setHosts(xoaService.hosts());
-					xoaServices.put(serviceInterface, servicdDef);
+					servicdDef.setServiceId(txService.serviceId());
+					//servicdDef.setHosts(txService.hosts());
+					txServices.put(serviceInterface, servicdDef);
 					break;
 				}
 			}

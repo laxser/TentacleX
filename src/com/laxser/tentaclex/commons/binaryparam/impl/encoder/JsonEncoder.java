@@ -6,10 +6,11 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import org.codehaus.jackson.map.DeserializationConfig;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.annotate.JsonSerialize;
-
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.laxser.tentaclex.commons.binaryparam.Encoder;
 import com.laxser.tentaclex.commons.binaryparam.Encoding;
 
@@ -26,12 +27,13 @@ public class JsonEncoder implements Encoder{
     static {
         mapper = new ObjectMapper();
         //设置ObjectMapper只序列化非null的属性，这样可以节省流量
-        mapper.getSerializationConfig().setSerializationInclusion(
-                JsonSerialize.Inclusion.NON_NULL);
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+   
         //disable掉FAIL_ON_UNKNOWN_PROPERTIES属性，增强容错性；因为现在有从客户端发json到服务端，在服务端反解的情况了，
         //所以要加上这个容错选项。
-        mapper.getDeserializationConfig().disable(
-                DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES);
+       
+       mapper.disable(
+                DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
     }
     @Override
     public Object decode(byte[] data) {

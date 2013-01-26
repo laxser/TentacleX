@@ -5,9 +5,9 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.codehaus.jackson.map.ObjectMapper;
 import org.jboss.netty.handler.codec.http.HttpHeaders;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.laxser.tentaclex.jackson.ObjectMapperFactory;
 import com.laxser.tentaclex.methods.TentacleDeleteMethod;
 import com.laxser.tentaclex.methods.TentacleGetMethod;
@@ -56,6 +56,7 @@ public abstract class Method {
 	public static Method get(String url) {
 		Method method = new TentacleGetMethod();
 		resolveUrl(url, method);
+		
 		return method;
 	}
 	
@@ -99,10 +100,10 @@ public abstract class Method {
 	
 	private static void resolveUrl(String url, Method method) {
 		
-		//由于xoa并不是标准的URL协议，所以不能用jdk自带的URL类来解析
+		//由于tx并不是标准的URL协议，所以不能用jdk自带的URL类来解析
 		
 		int index = url.indexOf("://");
-		//String protocol = "xoa";
+		//String protocol = "tx";
 		if (index != -1) {
 			//protocol = url.substring(0, index);
 			url = url.substring(index + 3);
@@ -140,8 +141,8 @@ public abstract class Method {
     public abstract TentacleMethodName getName();
 	
 	/**
-	 * 此XOA方法要访问的service的id，也就是要访问的虚机名(不包括端口)
-	 * 如blog.xoa.renren.com
+	 * 此tx方法要访问的service的id，也就是要访问的虚机名(不包括端口)
+	 * 如blog.tx.renren.com
 	 * 
 	 * @param serviceId
 	 */
@@ -150,7 +151,7 @@ public abstract class Method {
 	}
 	
 	/**
-	 * @return 此XOA方法要访问的service的id
+	 * @return 此tx方法要访问的service的id
 	 */
 	public String getServiceId() {
 		return serviceId;
@@ -280,7 +281,7 @@ public abstract class Method {
 	
 	public String getUrl() {
 		StringBuilder sb = new StringBuilder(50);
-		sb.append("xoa://"); //这里改成tx
+		sb.append("tx://"); //这里改成tx
 		sb.append(serviceId);
 		if (port != -1) {
 			sb.append(":");

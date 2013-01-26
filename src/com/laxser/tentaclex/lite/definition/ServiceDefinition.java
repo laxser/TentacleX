@@ -1,7 +1,7 @@
 package com.laxser.tentaclex.lite.definition;
 
 /**
- * 一个XOA service的定义
+ * 一个tx service的定义
  * 
  * @author laxser  Date 2012-6-1 上午8:56:37
 @contact [duqifan@gmail.com]

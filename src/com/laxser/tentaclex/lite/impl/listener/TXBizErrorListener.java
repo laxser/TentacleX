@@ -10,7 +10,7 @@ import com.laxser.tentaclex.lite.ServiceFuture;
 
 /**
  * 
- * 监听返回，如果返回的是XoaBizErrorBean，则提取之；
+ * 监听返回，如果返回的是txBizErrorBean，则提取之；
  * 如果是其它错误，则log之；
  * 如果是成功的response，则什么也不做。
  * 

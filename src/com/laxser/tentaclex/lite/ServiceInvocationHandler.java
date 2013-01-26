@@ -35,7 +35,7 @@ import com.laxser.tentaclex.methods.TentacleMultiFormatPostMethod;
 import com.laxser.tentaclex.util.URIUtil;
 
 /**
- * Xoa方法的Proxy的InvocationHandler
+ * tx方法的Proxy的InvocationHandler
  * 
  * @author laxser  Date 2012-6-1 上午8:55:16
 @contact [duqifan@gmail.com]
@@ -62,7 +62,7 @@ public class ServiceInvocationHandler implements InvocationHandler{
 	
 	public ServiceInvocationHandler(ServiceDefinition serviceDefinition) {
 		this.serviceDefinition = serviceDefinition;
-		client = getXoaClient();
+		client = getTxClient();
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -89,17 +89,17 @@ public class ServiceInvocationHandler implements InvocationHandler{
 			}
 		}
 		if (methodDef == null) {
-			throw new IllegalArgumentException("Not XOA method");
+			throw new IllegalArgumentException("Not tx method");
 		}
 		
-		Map<String, Object> xoaParams = extractParams(methodDef, args);	//提取参数值
-		Map<String, Object> xoaHeaders = extractHeaders(methodDef, args);	//提取header值
+		Map<String, Object> txParams = extractParams(methodDef, args);	//提取参数值
+		Map<String, Object> txHeaders = extractHeaders(methodDef, args);	//提取header值
 		
-		com.laxser.tentaclex.Method xoaMethod = createXoaMethod(methodDef, xoaParams, xoaHeaders);
+		com.laxser.tentaclex.Method txMethod = createtxMethod(methodDef, txParams, txHeaders);
 		
 		final DefaultServiceFutrue future = new DefaultServiceFutrue(methodDef.getReturnType());
-		future.setMethod(xoaMethod);
-		future.setXoaClient(client);
+		future.setMethod(txMethod);
+		future.setTxClient(client);
 		
 		return future;
 	}
@@ -108,51 +108,51 @@ public class ServiceInvocationHandler implements InvocationHandler{
 	 * 根据给定信息构造com.laxser.tentaclex.Method
 	 * 
 	 * @param methodDef
-	 * @param xoaParams
-	 * @param xoaHeaders
+	 * @param txParams
+	 * @param txHeaders
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-    private com.laxser.tentaclex.Method createXoaMethod(MethodDefinition methodDef, Map<String, Object> xoaParams, Map<String, Object> xoaHeaders) {
+    private com.laxser.tentaclex.Method createtxMethod(MethodDefinition methodDef, Map<String, Object> txParams, Map<String, Object> txHeaders) {
 
 		String uri = methodDef.getUri();
 		Set<String> hitParams = new HashSet<String>();
-		uri = URIUtil.replaceParams(uri, xoaParams, hitParams);	//替换URI模板中的变量
-		String url = "xoa://" + serviceDefinition.getServiceId() + uri;
+		uri = URIUtil.replaceParams(uri, txParams, hitParams);	//替换URI模板中的变量
+		String url = "tx://" + serviceDefinition.getServiceId() + uri;
 		if (logger.isDebugEnabled()) {
 			logger.debug("url:" + url);
 		}
 		
 		boolean multiformat = false;
 		//构造Method实例
-		com.laxser.tentaclex.Method xoaMethod;
+		com.laxser.tentaclex.Method txMethod;
 		String sMethod = methodDef.getMethod();
 		if ("GET".equalsIgnoreCase(sMethod)) {
-			xoaMethod = com.laxser.tentaclex.Method.get(url);
+			txMethod = com.laxser.tentaclex.Method.get(url);
 		} else if ("POST".equalsIgnoreCase(sMethod)) {
 		    if (TXPost.CONNTENT_TYPE_MULTIFORMAT.equals(methodDef.getContentType())) {
-		        xoaMethod = com.laxser.tentaclex.Method.multiFormatPost(url);
+		        txMethod = com.laxser.tentaclex.Method.multiFormatPost(url);
 		        multiformat = true;
 		    } else {
-		        xoaMethod = com.laxser.tentaclex.Method.post(url);
+		        txMethod = com.laxser.tentaclex.Method.post(url);
 		    }
 		} else if ("PUT".equalsIgnoreCase(sMethod)) {
-			xoaMethod = com.laxser.tentaclex.Method.put(url);
+			txMethod = com.laxser.tentaclex.Method.put(url);
 		} else if ("DELETE".equalsIgnoreCase(sMethod)) {
-			xoaMethod = com.laxser.tentaclex.Method.delete(url);
+			txMethod = com.laxser.tentaclex.Method.delete(url);
 		} else {
-			throw new IllegalArgumentException("Illegal xoa method:" + sMethod);
+			throw new IllegalArgumentException("Illegal tx method:" + sMethod);
 		}
 		
 		//填参数
-		for (Entry<String, Object> entry : xoaParams.entrySet()) {
+		for (Entry<String, Object> entry : txParams.entrySet()) {
 			String paramName = entry.getKey();
 			if (!hitParams.contains(paramName)) {	//已经在URI中出现的参数就不处理了
 				
 			    ParamDefinition paramDef = methodDef.getParamDefinition(paramName);
 			    
 			    if (multiformat) {   //multiformat格式的
-			        TentacleMultiFormatPostMethod multiFormatPostMethod = (TentacleMultiFormatPostMethod)xoaMethod;
+			        TentacleMultiFormatPostMethod multiFormatPostMethod = (TentacleMultiFormatPostMethod)txMethod;
 			        if (TXParam.TYPE_JAVA.equals(paramDef.getType())) {
 			            multiFormatPostMethod.setParam(ParamFormat.JAVA_SERIALIZATION, paramName, entry.getValue());
 			        } else {
@@ -173,20 +173,20 @@ public class ServiceInvocationHandler implements InvocationHandler{
 			    } else { //普通的raw格式
 			        
 			        if (TXParam.TYPE_JSON.equals(paramDef.getType())) { //json类型传输
-	                    xoaMethod.setParamAsJson(paramName, entry.getValue());
+	                    txMethod.setParamAsJson(paramName, entry.getValue());
 	                } else {    //普通字符串类型传输
 	                    Object value = entry.getValue();
 	                    if (value instanceof Collection) {
 	                        Collection<Object> collection = (Collection<Object>)value;
 	                        for (Object subvalue : collection) {
-	                            xoaMethod.setParam(paramName, subvalue.toString());
+	                            txMethod.setParam(paramName, subvalue.toString());
 	                        }
 	                    } else if (value.getClass().isArray()) {
 	                        for (int i = 0; i < Array.getLength(value); i++) {
-	                            xoaMethod.setParam(paramName, Array.get(value, i).toString());
+	                            txMethod.setParam(paramName, Array.get(value, i).toString());
 	                        }
 	                    } else {
-	                        xoaMethod.setParam(paramName, entry.getValue().toString());
+	                        txMethod.setParam(paramName, entry.getValue().toString());
 	                    }
 	                }
 			    }
@@ -194,48 +194,48 @@ public class ServiceInvocationHandler implements InvocationHandler{
 		}
 
 		//填headers
-		for (Entry<String, Object> entry : xoaHeaders.entrySet()) {
-			xoaMethod.setHeader(entry.getKey(), entry.getValue().toString());
+		for (Entry<String, Object> entry : txHeaders.entrySet()) {
+			txMethod.setHeader(entry.getKey(), entry.getValue().toString());
 		}
-		return xoaMethod;
+		return txMethod;
 	}
 	
 	/**
-	 * 提取XOA参数
+	 * 提取tx参数
 	 * 
 	 * @param methodDef
 	 * @param args
 	 * @return
 	 */
 	private Map<String, Object> extractParams(MethodDefinition methodDef, Object[] args) {
-		Map<String, Object> xoaParams = new HashMap<String, Object>();
+		Map<String, Object> txParams = new HashMap<String, Object>();
 		Iterator<ParamDefinition> iter = methodDef.paramDefinitions();
 		while (iter.hasNext()) {
 			ParamDefinition paramDef = iter.next();
-			xoaParams.put(paramDef.getParamName(), args[paramDef.getParamIndex()]);
+			txParams.put(paramDef.getParamName(), args[paramDef.getParamIndex()]);
 		}
-		return xoaParams;
+		return txParams;
 	}
 	
 	/**
-	 * 提取XOA header
+	 * 提取tx header
 	 * 
 	 * @param methodDef
 	 * @param args
 	 * @return
 	 */
 	private Map<String, Object> extractHeaders(MethodDefinition methodDef, Object[] args) {
-		Map<String, Object> xoaHeaders = new HashMap<String, Object>();
+		Map<String, Object> txHeaders = new HashMap<String, Object>();
 		Iterator<HeaderDefinition> iter = methodDef.headerDefinitions();
 		while (iter.hasNext()) {
 			HeaderDefinition headerDef = iter.next();
-			xoaHeaders.put(headerDef.getHeaderName(), args[headerDef.getParamIndex()]);
+			txHeaders.put(headerDef.getHeaderName(), args[headerDef.getParamIndex()]);
 		}
-		return xoaHeaders;
+		return txHeaders;
 	}
 	
 	/**
-	 * 解析方法参数，提取XoaParam的定义和XoaHeader的定义
+	 * 解析方法参数，提取txParam的定义和txHeader的定义
 	 * @param method
 	 * @param methodDef
 	 */
@@ -244,18 +244,18 @@ public class ServiceInvocationHandler implements InvocationHandler{
 		for (int i = 0; i < paramAnnotations.length; i++) {
 			for (int j = 0; j < paramAnnotations[i].length; j++) {
 				if (paramAnnotations[i][j] instanceof TXParam) {
-					TXParam xoaParam = (TXParam)paramAnnotations[i][j];
-					methodDef.addParamDefinition(xoaParam.value(), i, xoaParam.type());
+					TXParam txParam = (TXParam)paramAnnotations[i][j];
+					methodDef.addParamDefinition(txParam.value(), i, txParam.type());
 					if (logger.isDebugEnabled()) {
 						logger.debug("Found @" + TXParam.class.getSimpleName()
-								+ ": " + xoaParam.value() + " for the " + i + "-th param");
+								+ ": " + txParam.value() + " for the " + i + "-th param");
 					}
 				} else if (paramAnnotations[i][j] instanceof TXHeader) {
-					TXHeader xoaHeader = (TXHeader)paramAnnotations[i][j];
-					methodDef.addHeaderDefinition(xoaHeader.value(), i);
+					TXHeader txHeader = (TXHeader)paramAnnotations[i][j];
+					methodDef.addHeaderDefinition(txHeader.value(), i);
 					if (logger.isDebugEnabled()) {
 						logger.debug("Found @" + TXHeader.class.getSimpleName()
-								+ ": " + xoaHeader.value() + " for the " + i + "-th param");
+								+ ": " + txHeader.value() + " for the " + i + "-th param");
 					}
 				}
 			}
@@ -263,7 +263,7 @@ public class ServiceInvocationHandler implements InvocationHandler{
 	}
 	
 	/**
-	 * 分析方法的定义，提取XOA相关的信息
+	 * 分析方法的定义，提取tx相关的信息
 	 * 
 	 * @param method
 	 * @return
@@ -276,28 +276,28 @@ public class ServiceInvocationHandler implements InvocationHandler{
 		String restMethondName = null;
 		String contentType = null;
 		
-		TXGet xoaget = method.getAnnotation(TXGet.class);
-		if (xoaget != null) {
-			uri = xoaget.value();
+		TXGet txget = method.getAnnotation(TXGet.class);
+		if (txget != null) {
+			uri = txget.value();
 			restMethondName = "GET";
 		}
 		
-		TXPost xoapost = method.getAnnotation(TXPost.class);
-		if (xoapost != null) {
-			uri = xoapost.value();
+		TXPost txpost = method.getAnnotation(TXPost.class);
+		if (txpost != null) {
+			uri = txpost.value();
 			restMethondName = "POST";
-			contentType = xoapost.conntentType();
+			contentType = txpost.conntentType();
 		}
 		
-		TXPut xoaput = method.getAnnotation(TXPut.class);
-		if (xoaput != null) {
-			uri = xoaput.value();
+		TXPut txput = method.getAnnotation(TXPut.class);
+		if (txput != null) {
+			uri = txput.value();
 			restMethondName = "PUT";
 		}
 		
-		TXDelete xoadelete = method.getAnnotation(TXDelete.class);
-		if (xoadelete != null) {
-			uri = xoadelete.value();
+		TXDelete txdelete = method.getAnnotation(TXDelete.class);
+		if (txdelete != null) {
+			uri = txdelete.value();
 			restMethondName = "DELETE";
 		}
 		
@@ -339,12 +339,12 @@ public class ServiceInvocationHandler implements InvocationHandler{
 	}
 	
 	private String getAnnotationNameByMethod(String methodName) {
-		return "Xoa" + methodName.substring(0, 1).toUpperCase()
+		return "tx" + methodName.substring(0, 1).toUpperCase()
 				+ methodName.substring(1).toLowerCase();
 	}
 	
 	private static Tentacle defaultClient = new Octopus();
-	private Tentacle getXoaClient() {
+	private Tentacle getTxClient() {
 		return defaultClient;
 	}
 	

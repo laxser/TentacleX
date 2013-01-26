@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * xoa admin console主程序
+ * tx admin console主程序
  * 
  * @author laxser  Date 2012-6-1 上午8:47:01
 @contact [duqifan@gmail.com]

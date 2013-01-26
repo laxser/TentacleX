@@ -159,13 +159,13 @@ public interface ServiceFuture<T> {
 	    T getContent();
 	    
 	    /**
-	     * @return 当前调用所对应的{@link XoaResponse}，如果调用
+	     * @return 当前调用所对应的{@link txResponse}，如果调用
 	     * 尚未返回，则return null
 	     */
-	    //XoaResponse getResponse();
+	    //txResponse getResponse();
 	    
 	    /**
-	     * 获取{@link ServiceFuture}实例后，其所对应的XOA请求并没有提交出去，
+	     * 获取{@link ServiceFuture}实例后，其所对应的tx请求并没有提交出去，
 	     * 在提交之前，还是可以添加header和param的，而调用此方法后，请求才会真正
 	     * 提交出去。
 	     * 
@@ -174,7 +174,7 @@ public interface ServiceFuture<T> {
 	    ServiceFuture<T> submit();
 	    
 	    /**
-	     * 在submit方法调用之前，还可以向XOA请求中添加参数
+	     * 在submit方法调用之前，还可以向tx请求中添加参数
 	     * 
 	     * @param name 参数名
 	     * @param value 参数值
@@ -182,7 +182,7 @@ public interface ServiceFuture<T> {
 	    void setParam(String name, Object value);
 	    
 	    /**
-	     * 在submit方法调用之前，还可以向XOA请求中添加header
+	     * 在submit方法调用之前，还可以向tx请求中添加header
 	     * 
 	     * @param name header名
 	     * @param value header值

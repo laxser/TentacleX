@@ -10,7 +10,7 @@ package com.laxser.tentaclex.methods;
  */
 public class TentaclePostMethod extends TentacleEntityEnclosingMethod {
 	
-	/*public XoaPostMethod(String domain, String path) {
+	/*public txPostMethod(String domain, String path) {
 		super(domain, path);
 	}*/
 

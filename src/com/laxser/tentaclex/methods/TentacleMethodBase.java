@@ -20,9 +20,9 @@ public abstract class TentacleMethodBase {/*implements Method {
 	
 	protected Map<String, String> headers;
 	
-	public XoaMethodBase(){}
+	public txMethodBase(){}
 	
-	public XoaMethodBase(String serviceId, String path) {
+	public txMethodBase(String serviceId, String path) {
 		this.serviceId = serviceId;
 		this.path = path;
 	}

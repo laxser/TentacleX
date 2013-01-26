@@ -47,10 +47,10 @@ public class ServerXmlResolver {
 			List<Element> connectorNodes = root.elements("Connector");
 			for (Element connectorNode : connectorNodes) {
 				String protocol = connectorNode.attributeValue("protocol");
-				if (isXoaConnector(protocol)) {
+				if (isTxConnector(protocol)) {
 					port = Integer.parseInt(connectorNode.attributeValue("port"));
 					if (logger.isInfoEnabled()) {
-						logger.info("Found XOA connector on port: " + port);
+						logger.info("Found TX connector on port: " + port);
 					}
 				}
 			}
@@ -62,7 +62,7 @@ public class ServerXmlResolver {
 			
 			List<Element> hostNodes = root.element("Engine").elements("Host");
 			if (hostNodes.size() == 0) {
-				logger.error("No XOA Host found.");
+				logger.error("No TetacleX Host found.");
 				return null;
 			}
 			
@@ -101,8 +101,8 @@ public class ServerXmlResolver {
 	}
 	
 	
-	public boolean isXoaConnector(String protocol) {
-		return "com.renren.xoa.server.coyote.NettyHttpProtocolHandler".equals(protocol);
+	public boolean isTxConnector(String protocol) {
+		return "com.laxser.tentaclex.server.coyote.NettyHttpProtocolHandler".equals(protocol);
 	}
 	
 }

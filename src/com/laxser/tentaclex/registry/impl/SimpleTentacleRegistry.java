@@ -12,7 +12,7 @@ import com.laxser.tentaclex.registry.TentacleServiceDescriptor;
 import com.laxser.tentaclex.registry.TentacleServiceDescriptorBase;
 
 /**
- * 简单的XoaRegistry实现，可用于本地调试
+ * 简单的txRegistry实现，可用于本地调试
  * 
  * @author laxser  Date 2012-6-1 上午8:47:10
 @contact [duqifan@gmail.com]
@@ -82,7 +82,7 @@ public class SimpleTentacleRegistry extends AbstractTentacleRegistry {
 	}
 	
 	/**
-     * 注册一个XoaServiceDescriptor
+     * 注册一个txServiceDescriptor
      * @param desc
      * @deprecated
      */

@@ -16,7 +16,7 @@ public class StatusNotOkException extends TentacleXException {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 这个异常所包装的XoaResponse对象
+	 * 这个异常所包装的txResponse对象
 	 */
 	private TentacleResponse response;
 	

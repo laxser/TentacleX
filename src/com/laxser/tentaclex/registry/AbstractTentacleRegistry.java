@@ -12,7 +12,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
- * XoaRegistry的一个基础实现类
+ * TxRegistry的一个基础实现类
  * 
  * @author laxser  Date 2012-5-31 下午4:48:26
 @contact [duqifan@gmail.com]
@@ -36,7 +36,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
     private Map<String, List<TentacleServiceDescriptor>> serviceNodesMap = new ConcurrentHashMap<String, List<TentacleServiceDescriptor>>();
 
 	/* (non-Javadoc)
-	 * @see com.renren.xoa.registry.XoaRegistry#queryService(java.lang.String)
+	 * @see com.renren.tx.registry.XoaRegistry#queryService(java.lang.String)
 	 */
 	public TentacleServiceDescriptor queryService(String serviceId) {
 		
@@ -78,7 +78,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 					    StringBuilder sb = new StringBuilder();
 					    sb.append("Got ");
 					    sb.append(enabledNodes.size());
-					    sb.append(" enabled nodes in xoa-registry: ");
+					    sb.append(" enabled nodes in tx-registry: ");
 					    for (TentacleServiceDescriptor node : enabledNodes) {
 					        sb.append(node);
 					        sb.append(",");
@@ -112,7 +112,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 	
 	private List<TentacleServiceDescriptor> getServiceNodes0(String serviceId) {
 		
-		//在System property中配置XOA服务节点的hostport，可以覆盖掉registry中的配置。
+		//在System property中配置tx服务节点的hostport，可以覆盖掉registry中的配置。
 		//格式为：host1:port1,host2:port2
 		String hosts = getHostConfigFromSysProp(serviceId);
 		if (hosts != null) {
@@ -130,7 +130,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 				}
 			}
 			if (descs.size() > 0) {
-				logger.warn("Using system property to locate XOA service nodes:" + hosts);
+				logger.warn("Using system property to locate Tx service nodes:" + hosts);
 				return descs;
 			}
 		}
@@ -142,7 +142,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 	}
 	
 	/**
-	 * 在System property中配置XOA服务节点的hostport，可以覆盖掉registry中的配置。
+	 * 在System property中配置tx服务节点的hostport，可以覆盖掉registry中的配置。
 	 * 
 	 * 通过这个方法来获取System property的名字
 	 * 
@@ -150,7 +150,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 	 * @return
 	 */
 	private String getHostsPropertyName(String serviceId) {
-		return "xoa.hosts." + serviceId;
+		return "tx.hosts." + serviceId;
 	}
 	
 	/**
@@ -329,7 +329,7 @@ public abstract class AbstractTentacleRegistry implements TentacleRegistry {
 		}
 		
 		/**
-		 * 获取一个 XoaServiceDescriptor，使用简单的轮询负载均衡
+		 * 获取一个 TxServiceDescriptor，使用简单的轮询负载均衡
 		 * @return
 		 */
 		public TentacleServiceDescriptor get() {

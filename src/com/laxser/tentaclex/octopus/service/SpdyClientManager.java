@@ -47,8 +47,8 @@ public class SpdyClientManager {
             //构造新的Service
             synchronized (hostport.intern()) {
                 if (clientPool.get(hostport) == null) {
-                    SpdyClient xoaService = initClient(hostport);
-                    clientPool.put(hostport, xoaService);
+                    SpdyClient txService = initClient(hostport);
+                    clientPool.put(hostport, txService);
                 }
             }
         }

@@ -1,7 +1,7 @@
 package com.laxser.tentaclex.registry;
 
 /**
- * XoaServiceDescriptor的基�?���? * 
+ * txServiceDescriptor的基�?���? * 
  * @author laxser  Date 2012-6-1 上午8:46:00
 @contact [duqifan@gmail.com]
 @TentacleServiceDescriptorBase.java

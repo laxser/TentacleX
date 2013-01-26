@@ -61,7 +61,7 @@ public class ServiceFutureHelper {
 	    }
 	    
 	    StringBuilder sb = new StringBuilder(512);
-	    sb.append("Error while invoking XOA:(");
+	    sb.append("Error while invoking tx:(");
 	    
 	    if (future instanceof DefaultServiceFutrue) {
             DefaultServiceFutrue f = (DefaultServiceFutrue)future;
@@ -104,11 +104,11 @@ public class ServiceFutureHelper {
 	
 	
 	/**
-	 * 封装一次xoa调用中重复的逻辑。
+	 * 封装一次tx调用中重复的逻辑。
 	 * 
-	 * 传入一个future对象和timeout时间，返回XOA调用的返回值。
+	 * 传入一个future对象和timeout时间，返回tx调用的返回值。
 	 * 
-	 * 如果调用过程中出错或者超时，会抛出一个XoaException e，通过e.getMessage()可以
+	 * 如果调用过程中出错或者超时，会抛出一个txException e，通过e.getMessage()可以
 	 * 获取出错的文本信息。
 	 * 
 	 * 此方法试用于那些遇到调用出错，只用输出错误log即可的调用需求，如果需要更细粒度的
@@ -131,7 +131,7 @@ public class ServiceFutureHelper {
                 }
             } else {    //timeout
                 long endTime = System.currentTimeMillis();
-                throw new TentacleXException("XOA timeout in " + (endTime - startTime) + "ms: "
+                throw new TentacleXException("tx timeout in " + (endTime - startTime) + "ms: "
                         + ServiceFutureHelper.getInvocationInfo(future));
             }
         } catch (Throwable e) {
@@ -140,7 +140,7 @@ public class ServiceFutureHelper {
     }
 	
     /**
-     * 封装一次xoa调用中重复的逻辑，同时调用的时候提供吞吐量控制。
+     * 封装一次tx调用中重复的逻辑，同时调用的时候提供吞吐量控制。
      * 
      * 在maxThroughput范围内的请求可以最长支持maxTimeout的超时时间，
      * 防止服务端响应速度抖动造成的超时，同时又能保证安全。
@@ -166,7 +166,7 @@ public class ServiceFutureHelper {
         try {
             if (throughput > maxThroughput) {
                 throw new TentacleXException("Max throughput " + maxThroughput
-                        + " exceeded while invoke XOA: "
+                        + " exceeded while invoke tx: "
                         + ServiceFutureHelper.getInvocationInfo(future));
             }
             return execute(future, maxTimeout);

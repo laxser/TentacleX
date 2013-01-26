@@ -13,7 +13,7 @@ import com.laxser.tentaclex.Method;
  */
 public abstract class TentacleBodilessMethod extends Method {
 
-	/*public XoaBodilessMethod(String domain, int port, String path) {
+	/*public txBodilessMethod(String domain, int port, String path) {
 		super(domain, port, path);
 	}*/
 	

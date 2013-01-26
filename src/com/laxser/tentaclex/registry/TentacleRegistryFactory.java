@@ -4,7 +4,7 @@ import com.laxser.tentaclex.registry.impl.zookeeper.ZookeeperBasedRegistry;
 
 /**
  * 
- * XoaRegistry工厂
+ * txRegistry工厂
  * 
  *@author laxser  Date 2012-6-1 上午8:46:26
 @contact [duqifan@gmail.com]
@@ -32,7 +32,7 @@ public class TentacleRegistryFactory {
 	}
 	
 	/**
-	 * @return 默认的XoaRegistry
+	 * @return 默认的txRegistry
 	 */
 	public TentacleRegistry getDefaultRegistry() {
 		return registry;

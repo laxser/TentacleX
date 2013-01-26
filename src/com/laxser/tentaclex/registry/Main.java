@@ -18,7 +18,7 @@ public class Main {
         ZookeeperBasedRegistry reg = new ZookeeperBasedRegistry();
         reg.init();
         
-        reg.queryService("test.xoa.renren.com");
+        reg.queryService("test.tx.renren.com");
         
         reg.addListener(new TentacleRegistryLogListener());
         
